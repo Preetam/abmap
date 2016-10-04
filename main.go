@@ -151,6 +151,7 @@ func main() {
 			w.WriteHeader(http.StatusInternalServerError)
 			return
 		}
+		state = newState
 	})
 
 	panic(http.ListenAndServe(fmt.Sprintf("localhost:%d", id+8000), service))
